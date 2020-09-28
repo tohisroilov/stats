@@ -1,5 +1,8 @@
-module github.com/tohisroilov/stats
+module github.com/tohisroilov/stats/v2
 
 go 1.15
 
-require github.com/tohisroilov/bank v0.0.0-20200928181738-a50470900e32
+require (
+	github.com/tohisroilov/bank/v2 v2.0.0
+	github.com/tohisroilov/stats v1.0.0 // indirect
+)

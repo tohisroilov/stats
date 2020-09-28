@@ -2,7 +2,7 @@ package stats
 
 import (
 	"fmt"
-	"github.com/tohisroilov/bank/pkg/types"
+	"github.com/tohisroilov/bank/v2/pkg/types"
 )
 
 func ExampleAvg() {
@@ -11,16 +11,19 @@ func ExampleAvg() {
 			1,
 			10_000,
 			" ",
+			types.StatusOk,
 		},
 		{
 			2,
 			15_000,
 			" ",
+			types.StatusFail,
 		},
 		{
 			2,
-			5_000,
+			10_000,
 			" ",
+			types.StatusOk,
 		},
 	}
 
@@ -35,20 +38,23 @@ func ExampleTotalInCategory() {
 			1,
 			10_000,
 			"bank",
+			types.StatusFail,
 		},
 		{
 			2,
 			15_000,
 			"car",
+			types.StatusOk,
 		},
 		{
 			2,
 			5_000,
 			"bank",
+			types.StatusOk,
 		},
 	}
 
 	sum := TotalInCategory(payments, "bank")
 	fmt.Println(sum)
-	// Output: 15000
+	// Output: 20000
 }
