@@ -56,5 +56,5 @@ func ExampleTotalInCategory() {
 
 	sum := TotalInCategory(payments, "bank")
 	fmt.Println(sum)
-	// Output: 20000
+	// Output: 5000
 }
